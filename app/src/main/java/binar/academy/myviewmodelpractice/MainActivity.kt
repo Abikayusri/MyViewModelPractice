@@ -7,9 +7,9 @@ import binar.academy.myviewmodelpractice.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel: MainViewModel by viewModels()
     private lateinit var binding: ActivityMainBinding
     private var mCounter: Int = 0
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         withViewModel()
     }
 
-    // TODO 4: Lengkapi function tanpa viewModel
+    // TODO 4: Lengkapi function withoutViewModel
     private fun withoutViewModel() {
         binding.btnPlus.setOnClickListener {
             mIncrementCount()
@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         binding.tvCount.text = mCounter.toString()
     }
 
+    // TODO 6: Lengkapi function withViewModel seperti sebelumnya
     private fun withViewModel() {
         binding.btnPlus.setOnClickListener {
             wIncrementCount()
