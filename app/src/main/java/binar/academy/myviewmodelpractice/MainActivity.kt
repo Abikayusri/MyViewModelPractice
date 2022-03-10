@@ -8,20 +8,20 @@ import binar.academy.myviewmodelpractice.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private var mCounter: Int = 0
-    private val viewModel: MainViewModel by viewModels()
+    private var mCounter: Int = 0 // TODO 1: Buat sebuah variable untuk menampung angka
+    private val viewModel: MainViewModel by viewModels() // TODO 1: Tambahkan variable untuk memanggil viewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // TODO 3: Buat dua buah function untuk membandingkan penggunaan dengan dan tanpa viewModel
-//        withoutViewModel()
-        withViewModel()
+        // TODO 2: Buat dua buah function untuk membandingkan penggunaan dengan dan tanpa viewModel
+        withoutViewModel()
+        withViewModel() // TODO 3: Buat function baru untuk implement viewModel
     }
 
-    // TODO 4: Lengkapi function withoutViewModel
+    // TODO 3: Lengkapi function withoutViewModel
     private fun withoutViewModel() {
         binding.btnPlus.setOnClickListener {
             mIncrementCount()
@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
         binding.tvCount.text = mCounter.toString()
     }
 
-    // TODO 6: Lengkapi function withViewModel seperti sebelumnya
+    // TODO 2: Lengkapi function withViewModel seperti sebelumnya
     private fun withViewModel() {
         binding.btnPlus.setOnClickListener {
             wIncrementCount()

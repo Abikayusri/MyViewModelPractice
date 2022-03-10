@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 /**
  * @author Abika Chairul Yusri created on 3/3/2022 at 12:24 PM.
  */
-// TODO 5: Buat sebuah class viewModel dengan function lengkap
+// TODO 1: Buat sebuah class viewModel dengan function lengkap
 class MainViewModel : ViewModel() {
     val vCounnter: MutableLiveData<Int> = MutableLiveData(0)
 
